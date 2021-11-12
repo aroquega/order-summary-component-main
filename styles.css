@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --round-factor: 20px;
+}
+
+.card {
+    border-radius: var(--round-factor);
+    margin-inline: 20px;
+    box-shadow: 0px 10px 20px -5px var(--desaturated-blue);
+}
+
+.card__body {
+    padding: 20px 30px;
+}
+
+.card-image {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    border-start-start-radius: var(--round-factor);
+    border-start-end-radius: var(--round-factor);
+}
+
+.card__actions {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.card__title {
+    margin-block-end: 15px;
+}
+
+.button {
+    border: none;
+    font-size: 1rem;
+    padding-block: 15px;
+    padding-inline: 40px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.button--primary {
+    background-color: var(--bright-blue);
+    color: white;
+    box-shadow: 0px 10px 20px -5px var(--desaturated-blue);
+}
+
+.button-text {
+    background-color: transparent;
+    color: var(--desaturated-blue);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    font-weight: 900;
+    font-size: 1.375rem;
+}
+
+.dark-color {
+    color: var(--dark-blue);
+}
+
+.paragraph {
+    color: var(--desaturated-blue);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.pricing-panel {
+    display: flex;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    padding: 15px;
+    margin-block: 20px;
+}
+
+.text--title {
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.text--paragraph {
+    color: var(--desaturated-blue);
+}
+
+.text--normal-size {
+    font-size: 1rem;
+}
