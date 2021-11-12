@@ -22,10 +22,36 @@ html {
     --round-factor: 20px;
 }
 
+.app {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    background-color: var(--pale-blue);
+    background-image: url("images/pattern-background-mobile.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.app__content {
+    place-self: center;
+}
+
+.app__footer {
+    margin-block-start: 20px;
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card {
     border-radius: var(--round-factor);
     margin-inline: 20px;
     box-shadow: 0px 10px 20px -5px var(--desaturated-blue);
+    background-color: white;
 }
 
 .card__body {
@@ -110,4 +136,8 @@ html {
 
 .text--normal-size {
     font-size: 1rem;
+}
+
+a {
+    color: white;
 }
