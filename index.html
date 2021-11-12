@@ -9,63 +9,55 @@
     <link rel="stylesheet" href="styles.css">
 
     <title>Frontend Mentor | Order summary card</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
 </head>
 <body>
+<div class="app">
+    <main class="app__content">
+        <article class="card">
+            <img class="card-image" src="images/illustration-hero.svg" alt=""/>
+            <section class="card__body">
+                <header class="card__title">
+                    <h1 class="heading center dark-color">
+                        Order Summary
+                    </h1>
+                </header>
+                <p class="paragraph">
+                    You can now listen to millions of songs, audiobooks, and podcasts on any
+                    device anywhere you like!
+                </p>
 
-<article class="card">
-    <img class="card-image" src="images/illustration-hero.svg" alt=""/>
-    <section class="card__body">
-        <header class="card__title">
-            <h1 class="heading center dark-color">
-                Order Summary
-            </h1>
-        </header>
-        <p class="paragraph">
-            You can now listen to millions of songs, audiobooks, and podcasts on any
-            device anywhere you like!
-        </p>
-
-        <section class="pricing-panel">
-            <img src="images/icon-music.svg"/>
-            <div>
+                <section class="pricing-panel">
+                    <img src="images/icon-music.svg"/>
+                    <div>
                 <span class="text--title">
                 Annual Plan
                     </span>
-                <span class="text--paragraph">
+                        <span class="text--paragraph">
                 $59.99/year
                     </span>
-            </div>
-            <a>
-                Change
-            </a>
-        </section>
+                    </div>
+                    <a>
+                        Change
+                    </a>
+                </section>
 
-        <section class="card__actions">
-            <button class="button button--primary">
-                Proceed to Payment
-            </button>
-            <button class="button button-text">
-                Cancel Order
-            </button>
-        </section>
-    </section>
-</article>
-
-<div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+                <section class="card__actions">
+                    <button class="button button--primary">
+                        Proceed to Payment
+                    </button>
+                    <button class="button button-text">
+                        Cancel Order
+                    </button>
+                </section>
+            </section>
+        </article>
+    </main>
+    <footer class="app__footer">
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">aroquega</a>.
+        </div>
+    </footer>
 </div>
 </body>
 </html>
