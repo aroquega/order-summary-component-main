@@ -25,7 +25,7 @@ html {
 .app {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 50px;
+    grid-template-rows: minmax(0px, 1fr) 50px;
     background-color: var(--pale-blue);
     background-image: url("images/pattern-background-mobile.svg");
     background-position: top center;
@@ -33,11 +33,12 @@ html {
 }
 
 .app__content {
-    place-self: center;
+    padding: 1.5rem;
+    display: grid;
+    place-content: center;
 }
 
 .app__footer {
-    margin-block-start: 20px;
     background-color: var(--dark-blue);
     color: white;
     text-align: center;
@@ -49,13 +50,22 @@ html {
 
 .card {
     border-radius: var(--round-factor);
-    margin-inline: 20px;
     box-shadow: 0px 10px 20px -5px var(--desaturated-blue);
     background-color: white;
 }
 
 .card__body {
-    padding: 20px 30px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card__header {
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .card-image {
@@ -72,23 +82,26 @@ html {
     gap: 10px;
 }
 
-.card__title {
-    margin-block-end: 15px;
-}
-
 .button {
+    appearance: none;
     border: none;
-    font-size: 1rem;
+    font-size: .9rem;
     padding-block: 15px;
     padding-inline: 40px;
     border-radius: 10px;
     font-weight: 700;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 .button--primary {
     background-color: var(--bright-blue);
     color: white;
-    box-shadow: 0px 10px 20px -5px var(--desaturated-blue);
+    box-shadow: 0px 5px 30px -10px var(--bright-blue);
+    transition: 200ms background-color;
+}
+
+.button--primary:hover {
+    background-color: var(--dark-blue);
 }
 
 .button-text {
@@ -112,32 +125,46 @@ html {
 
 .paragraph {
     color: var(--desaturated-blue);
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
 }
 
 .pricing-panel {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--very-pale-blue);
     border-radius: 10px;
     padding: 15px;
-    margin-block: 20px;
+    gap: 1rem;
+}
+
+.plan-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .text--title {
     font-weight: 900;
     color: var(--dark-blue);
+    text-align: center;
 }
 
-.text--paragraph {
-    color: var(--desaturated-blue);
+.text--subtitle {
+    font-weight: 900;
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 0.9rem;
 }
+
 
 .text--normal-size {
     font-size: 1rem;
 }
 
 a {
-    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--bright-blue);
 }
